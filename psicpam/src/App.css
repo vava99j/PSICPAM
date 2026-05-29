@@ -1,0 +1,35 @@
+#center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+#services {
+  display: flex;
+  flex-direction: row;       /* Garante que os itens fiquem lado a lado */
+  flex-wrap: wrap;           /* Permite quebrar a linha em telas menores (responsivo) */
+  justify-content: center;   /* Centraliza os blocos na tela */
+  gap: 20px;                 /* Cria um espaçamento de 20px entre os serviços */
+  padding: 40px 20px;  
+  border-radius: 8px;       /* Espaçamento interno para respiro */
+}
+
+/* O título "Tipos de serviços" precisa ocupar 100% da largura para ficar no topo */
+#services > h3 {
+  flex-basis: 100%;          /* Força o h3 a ocupar a linha inteira */
+  text-align: center;        /* Centraliza o texto do título */
+  margin-bottom: 20px;       /* Afasta o título dos blocos de serviço */
+}
+
+/* Estilização individual dos blocos de serviço (opcional, para dar forma) */
+#career, #school, #familia {
+  flex: 1;                   /* Faz todos os blocos terem o mesmo tamanho */
+  min-width: 250px;          /* Impede que eles fiquem esmagados em telas pequenas */
+  max-width: 350px;          /* Limita o tamanho máximo para não esticarem demais */
+  padding: 20px;             /* Espaço interno de cada bloco */
+  border-radius: 8px;        /* Bordas arredondadas */
+  text-align: center;    
+  color: #823772;  
+  border: 1px solid #823772;  /* Centraliza o texto dentro do bloco */
+}
