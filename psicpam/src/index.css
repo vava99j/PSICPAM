@@ -31,7 +31,11 @@ body {
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 24px;
+  gap: 1%;
 }
 
 /* ==========================================================================
@@ -167,18 +171,27 @@ body {
   border-radius: 30px;
   box-shadow: var(--shadow-subtle);
 }
+#quemSou{
 
-.hero-badge {
-  position: absolute;
-  top: -20px;
-  right: -20px;
+}
+
+.badge {
   background: var(--primary-dark);
   color: var(--accent-cream);
-  padding: 20px;
-  border-radius: 50%;
-  font-weight: 700;
-  font-size: 1.1rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  
+  /* Faz a div ter exatamente o tamanho do texto inteiro */
+  width: calc( min-content ); 
+  height: max-content;
+  
+  /* O segredo do respiro: 8px em cima/baixo e 24px nas laterais */
+  padding: 8px 8px; 
+  
+  /* Garante o formato de pílula arredondada sem achatar o texto */
+  border-radius: 20%; 
+  
+  /* Centraliza o texto perfeitamente lá dentro */
+  text-align: center;
+  display: inline-block;
 }
 
 /* ==========================================================================
@@ -240,6 +253,12 @@ body {
 }
 
 .card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-cream);
+}
+
+.card:active {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
   border-color: var(--accent-cream);

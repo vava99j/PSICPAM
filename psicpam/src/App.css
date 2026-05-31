@@ -31,5 +31,6 @@
   border-radius: 8px;        /* Bordas arredondadas */
   text-align: center;    
   color: #823772;  
-  border: 1px solid #823772;  /* Centraliza o texto dentro do bloco */
+  border: 1px solid #823772;  
+  /* Centraliza o texto dentro do bloco */
 }
