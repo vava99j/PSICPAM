@@ -60,6 +60,10 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar-cont{
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .logo-area {
   display: flex;
@@ -171,13 +175,11 @@ body {
   border-radius: 30px;
   box-shadow: var(--shadow-subtle);
 }
-#quemSou{
 
-}
 
 .badge {
   background: var(--primary-dark);
-  color: var(--accent-cream);
+  color: var(--accent-light);
   
   /* Faz a div ter exatamente o tamanho do texto inteiro */
   width: calc( min-content ); 
@@ -190,8 +192,12 @@ body {
   border-radius: 20%; 
   
   /* Centraliza o texto perfeitamente lá dentro */
-  text-align: center;
   display: inline-block;
+}
+#quemSou{
+  display: flex;
+  text-align: center;
+  padding: 0% 2%;
 }
 
 /* ==========================================================================

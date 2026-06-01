@@ -17,15 +17,22 @@ function App() {
           </div>
           <button className="nav-btn" onClick={() => setContato(!contato)}>Contato</button>
         </div>
+        {contato && (
+          <div className="navbar-cont">
+            <a href="https://wa.me/5511951535821?text=Ol%C3%A1%20PsicPam%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20pacotes%gerais">
+              <button className="nav-btn" style={{ color: 'green' }}>WhatsApp</button>
+            </a>
+            <a href="https://ig.me/m/psicpam">
+              <button className="nav-btn" style={{ color: 'pink' }}>Instagram</button>
+            </a>
+            <a href="mailto:pamelafeitosapsico@gmail.com?subject=Contato pelo site&body=Olá PsicPam"
+            >
+              <button className="nav-btn" style={{ color: 'red' }}>E-mail</button>
+            </a>
+          </div>
+        )}
       </nav>
-      {contato && (
-        <div className="main-content">
-          <button className="nav-btn" style={{ color: 'red' }}>E-mail</button>
-          <button className="nav-btn" style={{ color: "bluepurple" }}>Instagram</button>
-          <button className="nav-btn" style={{ color: 'green' }}>WhatsApp</button>
 
-        </div>
-      )}
       <main className="main-content">
         <section id="center" className="hero-section">
           <div className="hero-text">
@@ -33,10 +40,11 @@ function App() {
             <p>Descubra novos caminhos para o desenvolvimento pessoal e profissional com um acompanhamento dedicado.</p>
             <a href="#services" className="cta-btn">Conhecer Serviços</a>
           </div>
-          <div id='uemSou'>
+          <div>
             <div className="badge">Quem <br />sou</div>
-            <p>PsicPam (Pâmela Feitosa) é psicopedagoga clínica e institucional, especialista em TDAH, com 15 anos de experiência na área da educação. Seu trabalho é voltado para a identificação e intervenção de dificuldades de aprendizagem, promovendo o desenvolvimento cognitivo, emocional e acadêmico de crianças de forma individualizada. Com uma abordagem humanizada e baseada em evidências científicas, oferece avaliações psicopedagógicas completas, acompanhamento personalizado e orientação para famílias e escolas. Além da atuação clínica, também é mentora de profissionais da área e palestrante, contribuindo para a formação e disseminação de conhecimento sobre aprendizagem e desenvolvimento infantil.</p>            <div className="hero-img-placeholder"></div>
-            <div className="hero-img-placeholder"></div>
+            <div id='quemSou'>
+              <p>PsicPam (Pâmela Feitosa) é psicopedagoga clínica e institucional, especialista em TDAH, com 15 anos de experiência na área da educação. Seu trabalho é voltado para a identificação e intervenção de dificuldades de aprendizagem, promovendo o desenvolvimento cognitivo, emocional e acadêmico de crianças de forma individualizada. Com uma abordagem humanizada e baseada em evidências científicas, oferece avaliações psicopedagógicas completas, acompanhamento personalizado e orientação para famílias e escolas. Além da atuação clínica, também é mentora de profissionais da área e palestrante, contribuindo para a formação e disseminação de conhecimento sobre aprendizagem e desenvolvimento infantil.</p>            <div className="hero-img-placeholder"></div>
+            </div>
           </div>
         </section>
 
@@ -50,7 +58,12 @@ function App() {
             <div className="card" id="career" onClick={() => setCareer(!career)}>
               <div className="card-icon">🚀</div>
               <h5>Impulsione sua carreira</h5>
-              <p>Orientação estratégica para profissionais que buscam recolocação ou evolução no mercado.</p>
+              {career ? (<p>Orientação estratégica para profissionais que buscam recolocação ou evolução no mercado.</p>
+              ) : (
+                <p><a href="https://wa.me/5511951535821?text=Ol%C3%A1%20PsicPam%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20pacotes%20para%20meu%20carreira%20Psic">
+                  clique aqui para saber mais </a>
+                </p>
+              )}
             </div>
 
             <div className="card" id="school" onClick={() => setChild(!child)}>
@@ -58,9 +71,11 @@ function App() {
               <h5>Reforço para seu filho</h5>
               {child ? (
                 <p>Intervenção Psicopedagógica Personalizada <br /> Avaliação Psicopedagógica Completa <br /> Laudo Psicopedagógico</p>
-                
+
               ) : (
-                <p>Suporte psicopedagógico especializado para potencializar o aprendizado e a confiança.</p>
+                <p><a href="https://wa.me/5511951535821?text=Ol%C3%A1%20PsicPam%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20pacotes%20para%20meu%20filho">
+                  clique aqui para saber mais </a>
+                </p>
               )}
             </div>
 
@@ -72,8 +87,9 @@ function App() {
                   Plano que une o mentoria e reforço para seu filho
                 </p>
               ) : (
-                <p>Você e seu filho aprendendo e evoluindo juntos em um ambiente de suporte mútuo.</p>
-              )}
+                <p><a href="https://wa.me/5511951535821?text=Ol%C3%A1%20PsicPam%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20pacotes%20para%20minha%20familia">
+                  clique aqui para saber mais </a>
+                </p>)}
             </div>
           </div>
         </section>
