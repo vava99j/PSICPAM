@@ -45,6 +45,7 @@ function App() {
             <div id='quemSou'>
               <p>PsicPam (Pâmela Feitosa) é psicopedagoga clínica e institucional, especialista em TDAH, com 15 anos de experiência na área da educação. Seu trabalho é voltado para a identificação e intervenção de dificuldades de aprendizagem, promovendo o desenvolvimento cognitivo, emocional e acadêmico de crianças de forma individualizada. Com uma abordagem humanizada e baseada em evidências científicas, oferece avaliações psicopedagógicas completas, acompanhamento personalizado e orientação para famílias e escolas. Além da atuação clínica, também é mentora de profissionais da área e palestrante, contribuindo para a formação e disseminação de conhecimento sobre aprendizagem e desenvolvimento infantil.</p>            <div className="hero-img-placeholder"></div>
             </div>
+
           </div>
         </section>
 
@@ -58,7 +59,7 @@ function App() {
             <div className="card" id="career" onClick={() => setCareer(!career)}>
               <div className="card-icon">🚀</div>
               <h5>Impulsione sua carreira</h5>
-              {career ? (<p>Orientação estratégica para profissionais que buscam recolocação ou evolução no mercado.</p>
+              {!career ? (<p>Orientação estratégica para profissionais que buscam recolocação ou evolução no mercado.</p>
               ) : (
                 <p><a href="https://wa.me/5511951535821?text=Ol%C3%A1%20PsicPam%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20pacotes%20para%20meu%20carreira%20Psic">
                   clique aqui para saber mais </a>
@@ -69,7 +70,7 @@ function App() {
             <div className="card" id="school" onClick={() => setChild(!child)}>
               <div className="card-icon">🧠</div>
               <h5>Reforço para seu filho</h5>
-              {child ? (
+              {!child ? (
                 <p>Intervenção Psicopedagógica Personalizada <br /> Avaliação Psicopedagógica Completa <br /> Laudo Psicopedagógico</p>
 
               ) : (
@@ -82,7 +83,7 @@ function App() {
             <div className="card" id="familia" onClick={() => setFamily(!family)}>
               <div className="card-icon">🏡</div>
               <h5>Plano família</h5>
-              {family ? (
+              {!family ? (
                 <p>
                   Plano que une o mentoria e reforço para seu filho
                 </p>

@@ -178,8 +178,10 @@ body {
 
 
 .badge {
-  background: var(--primary-dark);
-  color: var(--accent-light);
+  position:absolute;
+  background: var(--accent-cream);
+  color: var(--primary-dark);
+  text-align: center;
   
   /* Faz a div ter exatamente o tamanho do texto inteiro */
   width: calc( min-content ); 
@@ -189,15 +191,18 @@ body {
   padding: 8px 8px; 
   
   /* Garante o formato de pílula arredondada sem achatar o texto */
-  border-radius: 20%; 
+  border-radius: 9px; 
   
   /* Centraliza o texto perfeitamente lá dentro */
   display: inline-block;
 }
 #quemSou{
-  display: flex;
-  text-align: center;
-  padding: 0% 2%;
+  color: var(--accent-light);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/WhatsApp\ Image\ 2026-06-02\ at\ 16.44.41.jpeg);
+  width: 470px;
+  height: max-content;
+  border-radius: 10PX;
+  padding: 100px 20px;  
 }
 
 /* ==========================================================================
